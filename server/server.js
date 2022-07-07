@@ -18,10 +18,10 @@ app.use(bodyParser.json());
 
 //CREATE CONNECTION
 const db = mysql.createConnection({
-	host: keys.DB_HOST,
-	user: keys.DB_USER,
-	password: keys.DB_PASSWORD,
-	database: keys.DB_DATABASE,
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER,
+	password: process.env.DB_PASSWORD,
+	database: process.env.DB_DATABASE,
 });
 
 //CONNECT
