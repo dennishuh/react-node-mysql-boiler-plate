@@ -1,0 +1,254 @@
+// Variables
+$green: #e4ede0;
+$green-alt: darken($green, 15%);
+$blue: #dfe7ed;
+$blue-alt: darken($blue, 15%);
+$red: #eddfdf;
+$red-alt: darken($red, 15%);
+$screen-sm: 1000px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #f2f2f2;
+  color: #555555;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+input, button, select {
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.4rem;
+  margin: 0;
+  padding: 1.3rem;
+}
+
+.title-bar {
+	background: #e35557;
+	color: #ffffff;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr 100px;
+	align-items: center;
+}
+
+.title-bar button {
+	display: none;
+}
+
+.game-title-bar {
+	background: #e35557;
+	color: #ffffff;
+	font-size: 1em;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 4px 8px;
+	align-items: center;
+}
+
+.game-title-bar button {
+	padding: 0;
+	color: gold;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0;
+}
+
+.app .container-fluid {
+	padding: 0;
+}
+
+.team-score span {
+	border: #cccccc 1px solid;
+	display: inline-block;
+	width: 110px;
+	text-align: center;
+	padding: 10px 0;
+	width: 100%;
+	color: #e9b63f;
+	font-weight: bold;
+	font-size: 8rem;
+	background: #000000;
+}
+
+
+.delete-player {
+	text-align: right;
+}
+
+.hidden {
+	display: none;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.game-time {
+	text-align: right;
+	color: #a9a9a9;
+	border-bottom: 1px solid #ebebeb;
+	padding: 8px;
+	margin: 0 0 10px;
+}
+
+.game-time button {
+	padding: 0;
+}
+
+.game-time p {
+	margin: 0;
+}
+.item {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 1.3rem;
+  padding: 1.3rem;
+  position: relative;
+}
+
+.item--position-1 {
+  background: $green;
+  border-color: $green-alt;
+}
+
+.item--position-2 {
+  background: $blue;
+  border-color: $blue-alt;
+}
+
+.item--position-3 {
+  background: $red;
+  border-color: $red-alt;
+}
+
+.item__message {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+  color: #333333;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #555555;
+  color: #555555;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 1.3rem;
+  outline: none;
+  padding: 1.3rem;
+  transition: background .2s ease, transform .2s ease;
+
+  &:hover, &:focus {
+    background: #e8e8e8;
+  }
+
+  &:active {
+    background: #cccccc;
+    transform: scale(1.1);
+  }
+}
+
+.button--round {
+  border-radius: 50%;
+  padding: 10px 15px;
+}
+
+.btn-cancel {
+  @media screen and (max-width: $screen-sm) {
+    border-color: #d43f3a;
+    padding: 3px 6px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    color: $red-alt;
+    border-radius: 0;
+    border: 0;
+    height: 25px;
+  }
+
+}
+
+.btn-points {
+  flex-grow: 1;
+  margin: 0 3px;
+}
+.form {
+  display: flex;
+
+  @media screen and (max-width: $screen-sm) {
+    display: block;
+    width: 100%;
+  }
+
+  .button {
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.form__input {
+  border: 1px solid #e8e8e8;
+  flex-grow: 1;
+  padding: 0 1.3rem 0 1.3rem;
+  @media screen and (max-width: $screen-sm) {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 10px 0;
+  }
+}
+
+.reset-game {
+  margin-top: 100px;
+}
+.player {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: $screen-sm) {
+    display: block;
+  }
+}
+
+.player__name {
+  font-weight: 300;
+  font-size: 1.8rem;
+  @media screen and (max-width: $screen-sm) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+.player__stats {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.player__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
